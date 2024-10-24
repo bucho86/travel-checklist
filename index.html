@@ -8,8 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
+<!--header-->
+<!--//end header-->
     <header class="bg-white shadow-sm">
         <nav class="navbar w-full max-w-7xl mx-auto py-4">
             <!-- Logo -->
@@ -19,7 +20,7 @@
                     Airtrav
                 </a>
             </div>
-
+<!--//end header-->
             <!-- Navigation Links -->
             <div class="flex-none hidden md:flex space-x-6">
                 <a href="#" class="text-gray-600 hover:text-black">Things To Do</a>
@@ -72,6 +73,216 @@
 		<button class="btn btn-ghost btn-sm rounded-full bg-white">Where to stay</button>
 		<button class="btn btn-neutral btn-sm rounded-full">Checklist</button>
 	</div>
+<div class="flex items-center gap-4">
+  <div class="w-1/4">Check list</div>
+  <div class="w-full">
+    <div class="h-2 w-full bg-gray-200 rounded-full overflow-hidden">
+      <div class="bg-blue-500 h-full rounded-full" style="width: 40%;"></div>
+    </div>
+  </div>
+  <span>40%</span>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Search Results</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-6">
+    <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <div class="mb-6">
+            <h2 class="text-orange-400 font-medium">Travel (2)</h2>
+        </div>
+
+        <!-- Travel Cards Container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- First Travel Card -->
+            <div class="card bg-white shadow-sm hover:shadow-md transition-shadow">
+                <div class="card-body p-4">
+                    <div class="flex items-start justify-between">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-4 mb-4">
+                                <span class="text-slate-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                                    </svg>
+                                </span>
+                                <div class="flex flex-col">
+                                    <span class="text-sm text-slate-500">From</span>
+                                    <span class="font-medium">Dhaka City</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <span class="text-slate-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    </svg>
+                                </span>
+                                <div class="flex flex-col">
+                                    <span class="text-sm text-slate-500">To</span>
+                                    <span class="font-medium">Bangkok</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown dropdown-end">
+                            <label tabindex="0" class="btn btn-ghost btn-circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                                </svg>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="text-sm text-slate-500">From $711</span>
+                        <button class="btn btn-sm bg-blue-100 border-none text-blue-600 hover:bg-blue-200">Check prices</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Travel Card -->
+            <div class="card bg-white shadow-sm hover:shadow-md transition-shadow">
+                <div class="card-body p-4">
+                    <div class="flex items-start justify-between">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-4 mb-4">
+                                <span class="text-slate-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                                    </svg>
+                                </span>
+                                <div class="flex flex-col">
+                                    <span class="text-sm text-slate-500">From</span>
+                                    <span class="font-medium">Bangkok</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <span class="text-slate-400">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    </svg>
+                                </span>
+                                <div class="flex flex-col">
+                                    <span class="text-sm text-slate-500">To</span>
+                                    <span class="font-medium">Dhaka City</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown dropdown-end">
+                            <label tabindex="0" class="btn btn-ghost btn-circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                                </svg>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="text-sm text-slate-500">From $911</span>
+                        <button class="btn btn-sm bg-blue-100 border-none text-blue-600 hover:bg-blue-200">Check prices</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets & Tours</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-6">
+    <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <div class="flex justify-center mb-6">
+            <span class="bg-green-50 text-green-600 px-4 py-1 rounded-full">Tickets & Tours (2)</span>
+        </div>
+
+        <!-- Tours Cards Container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- First Tour Card -->
+            <div class="card bg-white shadow-sm hover:shadow-md transition-shadow">
+                <div class="card-body p-4">
+                    <div class="flex gap-4">
+                        <!-- Image -->
+                        <div class="w-32 h-24 flex-shrink-0">
+                            <img src="/api/placeholder/128/96" alt="Spas Bangkok" class="w-full h-full object-cover rounded-lg"/>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="font-medium text-lg">Spas - Bangkok</h3>
+                                    <p class="text-gray-500 text-sm">Wed 9/29</p>
+                                </div>
+
+                                <div class="dropdown dropdown-end">
+                                    <label tabindex="0" class="btn btn-ghost btn-circle btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                                        </svg>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-sm bg-blue-100 border-none text-blue-600 hover:bg-blue-200 mt-2">Buy tickets</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Tour Card -->
+            <div class="card bg-white shadow-sm hover:shadow-md transition-shadow">
+                <div class="card-body p-4">
+                    <div class="flex gap-4">
+                        <!-- Image -->
+                        <div class="w-32 h-24 flex-shrink-0">
+                            <img src="/api/placeholder/128/96" alt="Sea Life Bangkok" class="w-full h-full object-cover rounded-lg"/>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="font-medium text-lg">Sea Life Bangkok</h3>
+                                    <p class="text-gray-500 text-sm">Wed 9/29</p>
+                                </div>
+
+                                <div class="dropdown dropdown-end">
+                                    <label tabindex="0" class="btn btn-ghost btn-circle btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                                        </svg>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-sm bg-blue-100 border-none text-blue-600 hover:bg-blue-200 mt-2">Buy tickets</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
 
 </body>
 

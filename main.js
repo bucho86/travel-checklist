@@ -1,24 +1,36 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+document.addEventListener('DOMContentLoaded', () => {
+    // Toggle visibility of "Travel" section
+    const travelHeader = document.getElementById('travel-header');
+    const travelSection = document.getElementById('travel-section');
+    travelHeader.addEventListener('click', () => {
+        travelSection.classList.toggle('hidden');
+    });
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+    // Toggle visibility of "Hotel" section
+    const hotelHeader = document.getElementById('hotel-header');
+    const hotelSection = document.getElementById('hotel-section');
+    hotelHeader.addEventListener('click', () => {
+        hotelSection.classList.toggle('hidden');
+    });
 
-setupCounter(document.querySelector('#counter'))
+    // Populate "Plan Ahead" section
+    const planAheadSection = document.getElementById('plan-ahead-section');
+    const plans = [
+        { title: 'Book Flights', details: 'Book your flights early to get the best deals.' },
+        { title: 'Reserve Hotel', details: 'Reserve your hotel rooms in advance to ensure availability.' },
+        { title: 'Pack Essentials', details: 'Make a list of essential items to pack for your trip.' }
+    ];
+
+    plans.forEach(plan => {
+        const planDiv = document.createElement('div');
+        const planTitle = document.createElement('h3');
+        const planDetails = document.createElement('p');
+
+        planTitle.textContent = plan.title;
+        planDetails.textContent = plan.details;
+
+        planDiv.appendChild(planTitle);
+        planDiv.appendChild(planDetails);
+        planAheadSection.appendChild(planDiv);
+    });
+});

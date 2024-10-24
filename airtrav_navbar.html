@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airtrav Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        .checklist-item {
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 40px;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        .icon.travel {
+            background-color: #ffddd2;
+            color: #ff7755;
+        }
+
+        .icon.tickets {
+            background-color: #e1fff2;
+            color: #00b09b;
+        }
+
+        .icon.hotel {
+            background-color: #e0f2ff;
+            color: #4a90e2;
+        }
+
+        .icon.plan {
+            background-color: #f5f5ff;
+            color: #5c7cfa;
+        }
+
+        .count {
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-white shadow-sm">
+        <nav class="navbar w-full max-w-7xl mx-auto py-4">
+            <!-- Logo -->
+            <div class="flex-1">
+                <a href="#" class="text-xl font-bold">
+                    <img src="logo%20(1).png" alt="Airtrav Logo" class="inline-block w-8 h-8 mr-2">
+                    Airtrav
+                </a>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="flex-none hidden md:flex space-x-6">
+                <a href="#" class="text-gray-600 hover:text-black">Things To Do</a>
+                <a href="#" class="text-gray-600 hover:text-black">Tour</a>
+                <a href="#" class="text-gray-600 hover:text-black">Blog</a>
+            </div>
+
+            <!-- Right Section (Currency, FAQ, Notification, Avatar) -->
+            <div class="flex items-center gap-4">
+                <!-- Currency Dropdown -->
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-sm">USD</label>
+                    <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-32">
+                        <li><a href="#">USD</a></li>
+                        <li><a href="#">EUR</a></li>
+                        <li><a href="#">GBP</a></li>
+                    </ul>
+                </div>
+
+                <!-- FAQ -->
+                <a href="#" class="text-gray-600 hover:text-black">FAQ</a>
+
+                <!-- Notification Bell Icon -->
+                <button class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 00-9.33-5.195A2 2 0 018 3.158V3a2 2 0 00-1 0v.158a2 2 0 010 .847 6.002 6.002 0 00-4.338 10.195L5 17h5m0 0a3 3 0 006 0h-6z" />
+                    </svg>
+                </button>
+
+                <!-- User Avatar -->
+                <div class="avatar">
+                    <div class="w-10 rounded-full ring ring-gray-300 ring-offset-base-100 ring-offset-2">
+                        <img src="https://via.placeholder.com/150" alt="User Avatar" />
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Navigation Tabs -->
+	<div class="px-4 py-3 bg-gray-50 flex items-center gap-2">
+		<button class="btn btn-ghost btn-sm rounded-full bg-white">Route</button>
+		<div class="dropdown">
+			<button class="btn btn-ghost btn-sm rounded-full bg-white">
+                Day by day
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+		</div>
+		<button class="btn btn-ghost btn-sm rounded-full bg-white">Where to stay</button>
+		<button class="btn btn-neutral btn-sm rounded-full">Checklist</button>
+	</div>
+
+    <!-- Trip Checklist -->
+    <h1>Trip checklist</h1>
+
+    <div class="checklist-item">
+        <div class="icon travel">✈️</div>
+        Travel <span class="count">(2)</span>
+    </div>
+
+    <div class="checklist-item">
+        <div class="icon tickets">🎫</div>
+        Tickets & Tours <span class="count">(2)</span>
+    </div>
+
+    <div class="checklist-item">
+        <div class="icon hotel">🏠</div>
+        Hotel <span class="count">(1)</span>
+    </div>
+
+    <div class="checklist-item">
+        <div class="icon plan">✈️</div>
+        Plan Ahead <span class="count">(1)</span>
+    </div>
+
+</body>
+
+</html>
