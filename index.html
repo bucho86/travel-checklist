@@ -197,8 +197,7 @@
     </div>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -206,6 +205,170 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>City Weather Forecast</title>
+	<link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.css" rel="stylesheet" type="text/css" />
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-base-200 min-h-screen">
+	<div class="container mx-auto p-4">
+		<!-- Header -->
+		<div class="text-center mb-8">
+			<h1 class="text-4xl font-bold mb-2">Weather Forecast</h1>
+			<p class="text-gray-600">Enter a city name to get a 5-day weather forecast</p>
+		</div>
+
+		<!-- Search Form -->
+		<div class="card bg-base-100 shadow-xl max-w-2xl mx-auto mb-8">
+			<div class="card-body">
+
+
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+						<div class="form-control">
+							<label class="label">
+                            <span class="label-text">City</span>
+                        </label>
+							<input type="text" id="city" placeholder="Enter city" class="input input-bordered" />
+                    </div>
+
+							<div class="form-control">
+								<label class="label">
+                            <span class="label-text">State Code (optional)</span>
+                        </label>
+								<input type="text" id="state" placeholder="e.g., CA" class="input input-bordered" maxlength="2" />
+                    </div>
+
+								<div class="form-control">
+									<label class="label">
+                            <span class="label-text">Country Code</span>
+                        </label>
+									<input type="text" id="country" placeholder="e.g., US" class="input input-bordered" maxlength="2" value="US" />
+                    </div>
+								</div>
+
+								<button onclick="getWeather()" class="btn btn-primary mt-6">Get Weather Forecast</button>
+							</div>
+						</div>
+
+						<!-- City Information -->
+						<div id="cityInfo" class="alert alert-info max-w-2xl mx-auto mb-8 hidden">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+								class="stroke-current shrink-0 w-6 h-6">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+									d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+							</svg>
+							<span id="cityInfoText"></span>
+						</div>
+
+						<!-- Loading Indicator -->
+						<div id="loading" class="flex justify-center mb-8 hidden">
+							<span class="loading loading-spinner loading-lg"></span>
+						</div>
+
+
+
+						<!-- Weather Results -->
+						<div id="weatherResults" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+							<!-- Weather cards will be inserted here -->
+						</div>
+					</div>
+
+					<script>
+						async function getWeather() {
+            const apiKey = document.getElementById('apiKey').value;
+            const city = document.getElementById('city').value;
+            const state = document.getElementById('state').value;
+            const country = document.getElementById('country').value;
+
+            const loading = document.getElementById('loading');
+            const error = document.getElementById('error');
+            const errorText = document.getElementById('errorText');
+            const cityInfo = document.getElementById('cityInfo');
+            const cityInfoText = document.getElementById('cityInfoText');
+            const weatherResults = document.getElementById('weatherResults');
+
+            // Input validation
+            if (!apiKey || !city) {
+                error.classList.remove('hidden');
+                errorText.textContent = 'Please enter both API key and city name';
+                return;
+            }
+
+            // Show loading, hide other elements
+            loading.classList.remove('hidden');
+            error.classList.add('hidden');
+            cityInfo.classList.add('hidden');
+            weatherResults.innerHTML = '';
+
+            try {
+                // First, get coordinates for the city
+                const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}${state ? ',' + state : ''}${country ? ',' + country : ''}&limit=1&appid=${apiKey}`;
+                const geoResponse = await fetch(geoUrl);
+                const geoData = await geoResponse.json();
+
+                if (!geoData.length) {
+                    throw new Error('City not found');
+                }
+
+                const { lat, lon, name, state: locationState, country: locationCountry } = geoData[0];
+
+                // Update city info
+                cityInfo.classList.remove('hidden');
+                cityInfoText.textContent = `Showing weather for ${name}${locationState ? ', ' + locationState : ''}, ${locationCountry}`;
+
+                // Get weather forecast
+                const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+                const weatherResponse = await fetch(weatherUrl);
+                const weatherData = await weatherResponse.json();
+
+                // Get one forecast per day (every 24 hours)
+                const dailyForecasts = weatherData.list.filter((item, index) => index % 8 === 0).slice(0, 5);
+
+                // Display weather cards
+                weatherResults.innerHTML = dailyForecasts.map(forecast => `
+                    <div class="card bg-base-100 shadow-xl">
+                        <div class="card-body p-20">
+                            <h2 class="card-title justify-center text-lg">
+                                ${new Date(forecast.dt * 1000).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
+                            </h2>
+                            <div class="flex justify-center">
+                                <img src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+                                     alt="${forecast.weather[0].description}"
+                                     class="w-20 h-20">
+                            </div>
+                            <div class="stats stats-vertical shadow">
+                                <div class="stat">
+                                    <div class="stat-title">Temperature</div>
+                                    <div class="stat-value text-2xl">${Math.round(forecast.main.temp)}°C</div>
+                                    <div class="stat-desc">Feels like ${Math.round(forecast.main.feels_like)}°C</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-title">Humidity</div>
+                                    <div class="stat-value text-2xl">${forecast.main.humidity}%</div>
+                                    <div class="stat-desc">Wind: ${Math.round(forecast.wind.speed)} m/s</div>
+                                </div>
+                            </div>
+                            <p class="text-center mt-2 capitalize font-medium">${forecast.weather[0].description}</p>
+                        </div>
+                    </div>
+                `).join('');
+
+            } catch (err) {
+                error.classList.remove('hidden');
+                errorText.textContent = err.message === 'City not found'
+                    ? 'City not found. Please check the spelling and try again.'
+                    : 'Failed to fetch weather data. Please check your API key and try again.';
+            } finally {
+                loading.classList.add('hidden');
+            }
+        }
+					</script>
+</body>
 <body class="bg-gray-50 p-6">
     <div class="max-w-4xl mx-auto">
         <!-- Header -->
