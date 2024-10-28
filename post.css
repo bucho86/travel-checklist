@@ -1,0 +1,51 @@
+<script>
+						async function getWeather() {
+            const apiKey = document.getElementById('apiKey').value;
+            const city = document.getElementById('city').value;
+            const state = document.getElementById('state').value;
+            const country = document.getElementById('country').value;
+
+            const loading = document.getElementById('loading');
+            const error = document.getElementById('error');
+            const errorText = document.getElementById('errorText');
+            const cityInfo = document.getElementById('cityInfo');
+            const cityInfoText = document.getElementById('cityInfoText');
+            const weatherResults = document.getElementById('weatherResults');
+
+            // Input validation
+            if (!apiKey || !city) {
+                error.classList.remove('hidden');
+                errorText.textContent = 'Please enter both API key and city name';
+                return;
+            }
+
+            // Show loading, hide other elements
+            loading.classList.remove('hidden');
+            error.classList.add('hidden');
+            cityInfo.classList.add('hidden');
+            weatherResults.innerHTML = '';
+
+            try {
+                // First, get coordinates for the city
+                const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}${state ? ',' + state : ''}${country ? ',' + country : ''}&limit=1&appid=${apiKey}`;
+                const geoResponse = await fetch(geoUrl);
+                const geoData = await geoResponse.json();
+
+                if (!geoData.length) {
+                    throw new Error('City not found');
+                }
+
+                const { lat, lon, name, state: locationState, country: locationCountry } = geoData[0];
+
+                // Update city info
+                cityInfo.classList.remove('hidden');
+                cityInfoText.textContent = `Showing weather for ${name}${locationState ? ', ' + locationState : ''}, ${locationCountry}`;
+
+                // Get weather forecast
+                const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+                const weatherResponse = await fetch(weatherUrl);
+                const weatherData = await weatherResponse.json();
+
+                // Get one forecast per day (every 24 hours)
+                const dailyForecasts = weatherData.list.filter((item, index) => index % 8 === 0).slice(0, 5);
+</script>
