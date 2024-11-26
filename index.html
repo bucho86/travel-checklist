@@ -1,27 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<div lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airtrav Navbar</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
+</div>
 <!--header-->
-<!--//end header-->
     <header class="bg-white shadow-sm">
         <nav class="navbar w-full max-w-7xl mx-auto py-4">
+
             <!-- Logo -->
             <div class="flex-1">
-                <divclass=""flex></divclass>
                 <a href="#" class="text-xl font-bold">
                     <img src="logo%20(1).png" alt="Airtrav Logo" class="inline-block w-8 h-8 mr-2">
                     Airtrav
                 </a>
             </div>
 <!--//end header-->
+
             <!-- Navigation Links -->
             <div class="flex-none hidden md:flex space-x-6">
                 <a href="#" class="text-gray-600 hover:text-black">Things To Do</a>
@@ -31,6 +28,7 @@
 
             <!-- Right Section (Currency, FAQ, Notification, Avatar) -->
             <div class="flex-none space-x-4 flex items-center">
+
                 <!-- Currency Dropdown -->
                 <div class="dropdown dropdown-end">
                     <label tabindex="0" class="btn btn-ghost btn-sm">USD</label>
@@ -60,6 +58,8 @@
             </div>
         </nav>
     </header>
+
+
 <!-- Navigation Tabs -->
 	<div class="px-4 py-3 bg-gray-50 flex items-center gap-2">
 		<button class="btn btn-ghost btn-sm rounded-full bg-white">Route</button>
@@ -74,32 +74,32 @@
 		<button class="btn btn-ghost btn-sm rounded-full bg-white">Where to stay</button>
 		<button class="btn btn-neutral btn-sm rounded-full">Checklist</button>
 	</div>
+
+<!--this is the checklist in %-->
+
 <div class="flex items-center gap-4">
   <div class="w-1/4">Check list</div>
   <div class="w-full">
-    <div class="h-2 w-full bg-gray-200 rounded-full overflow-hidden">
-      <div class="bg-blue-500 h-full rounded-full" style="width: 40%;"></div>
+    <div class="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
+      <div class="bg-blue-500 h-full rounded-full" style="width: 3.5%;"></div>
     </div>
   </div>
-  <span>40%</span>
+  <span>45%</span>
 </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Search Results</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 p-6">
+
+<!--// hero section-->
+<div class="bg-gray-50 p-6">
     <div class="max-w-4xl mx-auto">
+
         <!-- Header -->
         <div class="mb-6">
             <h2 class="text-orange-400 font-medium">Travel (2)</h2>
         </div>
 
-        <!-- Travel Cards Container -->
+       <!-- Travel Cards Container -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
             <!-- First Travel Card -->
             <div class="card bg-white shadow-sm hover:shadow-md transition-shadow">
                 <div class="card-body p-4">
@@ -113,7 +113,7 @@
                                 </span>
                                 <div class="flex flex-col">
                                     <span class="text-sm text-slate-500">From</span>
-                                    <span class="font-medium">Dhaka City</span>
+                                    <span class="font-medium">Kush City</span>
                                 </div>
                             </div>
 
@@ -126,7 +126,7 @@
                                 </span>
                                 <div class="flex flex-col">
                                     <span class="text-sm text-slate-500">To</span>
-                                    <span class="font-medium">Bangkok</span>
+                                    <span class="font-medium">The Clouds</span>
                                 </div>
                             </div>
                         </div>
@@ -141,11 +141,12 @@
                     </div>
 
                     <div class="flex justify-between items-center mt-4">
-                        <span class="text-sm text-slate-500">From $711</span>
+                        <span class="text-sm text-slate-500">From $420</span>
                         <button class="btn btn-sm bg-blue-100 border-none text-blue-600 hover:bg-blue-200">Check prices</button>
                     </div>
                 </div>
             </div>
+            <!-- First Travel Card End -->
 
             <!-- Second Travel Card -->
             <div class="card bg-white shadow-sm hover:shadow-md transition-shadow">
@@ -196,188 +197,84 @@
         </div>
     </div>
 </body>
+    <!-- Second Travel Card End -->
 
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tickets & Tours</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>City Weather Forecast</title>
-	<link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.css" rel="stylesheet" type="text/css" />
-	<script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body class="bg-base-200 min-h-screen">
+    <!--// weather section -->
+<div class="bg-base-800 min-h-screen">
 	<div class="container mx-auto p-4">
-		<!-- Header -->
-		<div class="text-center mb-8">
-			<h1 class="text-4xl font-bold mb-2">Weather Forecast</h1>
+
+		<!-- Header for "weather forecast" -->
+
+		<!-- Form to search for the "waether-forecast" -->
+<body>
+	<div class="text-center mb-8">
+			<h1 class="text-4xl font-bold mb-2">Weather Forecast</h1><!-- Header for "weather forecast" -->
 			<p class="text-gray-600">Enter a city name to get a 5-day weather forecast</p>
-		</div>
 
-		<!-- Search Form -->
-		<div class="card bg-base-100 shadow-xl max-w-2xl mx-auto mb-8">
-			<div class="card-body">
+             <h1 id="para1"> </h1>
+            <p id ="inputContainer">city: <input type="text" id="cityInput"></p>
+            <button onclick="getData()"  class="bg-blue-50 text-blue-600 px-4 py-1 rounded-full">Click Me</button>
+            <h2 id="cityName">--Boston--</h2>
+
+        <div id="weatherContainer">
+            <div id="iconsContainer">
+
+                    <!-- //Day1-->
+                <div class="icons">
+                    <p class="weather" id="day1"></p>
+                    <div class="image"><img src="dots.png"  class=" imgClass" id="img1" alt=""></div>
+                   <p class="minvalues" id="day1Min">Loading...</p>
+                    <p class="maxvalues" id="day1Max">Loading...</p>
+                </div>
+                <!-- //Day2-->
+                <div class="icons">
+                    <p class="weather" id="day2"></p>
+                    <div class="image"><img src="dots.png"  class=" imgClass" id="img1" alt=""></div>
+                   <p class="minvalues" id="day2Min">Loading...</p>
+                    <p class="maxvalues" id="day2Max">Loading...</p>
+                </div>
+
+                <!-- //Day3-->
+                 <div class="icons">
+                    <p class="weather" id="day3"></p>
+                    <div class="image"><img src="dots.png"  class=" imgClass" id="img1" alt=""></div>
+                   <p class="minvalues" id="day3Min">Loading...</p>
+                    <p class="maxvalues" id="day3Max">Loading...</p>
+                </div>
+
+                    <!-- //Day4-->
+                 <div class="icons">
+                    <p class="weather" id="day4"></p>
+                    <div class="image"><img src="dots.png"  class=" imgClass" id="img1" alt=""></div>
+                   <p class="minvalues" id="day4Min">Loading...</p>
+                    <p class="maxvalues" id="day4Max">Loading...</p>
+                </div>
+
+                <!-- //Day5-->
+                 <div class="icons">
+                    <p class="weather" id="day5"></p>
+                    <div class="image"><img src="dots.png"  class=" imgClass" id="img1" alt=""></div>
+                   <p class="minvalues" id="day5Min">Loading...</p>
+                    <p class="maxvalues" id="day5Max">Loading...</p>
+                </div>
+            </div>
+        </div>
+</div>
 
 
-					<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-						<div class="form-control">
-							<label class="label">
-                            <span class="label-text">City</span>
-                        </label>
-							<input type="text" id="city" placeholder="Enter city" class="input input-bordered" />
-                    </div>
+					
 
-							<div class="form-control">
-								<label class="label">
-                            <span class="label-text">State Code (optional)</span>
-                        </label>
-								<input type="text" id="state" placeholder="e.g., CA" class="input input-bordered" maxlength="2" />
-                    </div>
-
-								<div class="form-control">
-									<label class="label">
-                            <span class="label-text">Country Code</span>
-                        </label>
-									<input type="text" id="country" placeholder="e.g., US" class="input input-bordered" maxlength="2" value="US" />
-                    </div>
-								</div>
-
-								<button onclick="getWeather()" class="btn btn-primary mt-6">Get Weather Forecast</button>
-							</div>
-						</div>
-
-						<!-- City Information -->
-						<div id="cityInfo" class="alert alert-info max-w-2xl mx-auto mb-8 hidden">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-								class="stroke-current shrink-0 w-6 h-6">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-									d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-							</svg>
-							<span id="cityInfoText"></span>
-						</div>
-
-						<!-- Loading Indicator -->
-						<div id="loading" class="flex justify-center mb-8 hidden">
-							<span class="loading loading-spinner loading-lg"></span>
-						</div>
-
-
-
-						<!-- Weather Results -->
-						<div id="weatherResults" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-							<!-- Weather cards will be inserted here -->
-						</div>
-					</div>
-
-					<script>
-						async function getWeather() {
-            const apiKey = document.getElementById('apiKey').value;
-            const city = document.getElementById('city').value;
-            const state = document.getElementById('state').value;
-            const country = document.getElementById('country').value;
-
-            const loading = document.getElementById('loading');
-            const error = document.getElementById('error');
-            const errorText = document.getElementById('errorText');
-            const cityInfo = document.getElementById('cityInfo');
-            const cityInfoText = document.getElementById('cityInfoText');
-            const weatherResults = document.getElementById('weatherResults');
-
-            // Input validation
-            if (!apiKey || !city) {
-                error.classList.remove('hidden');
-                errorText.textContent = 'Please enter both API key and city name';
-                return;
-            }
-
-            // Show loading, hide other elements
-            loading.classList.remove('hidden');
-            error.classList.add('hidden');
-            cityInfo.classList.add('hidden');
-            weatherResults.innerHTML = '';
-
-            try {
-                // First, get coordinates for the city
-                const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}${state ? ',' + state : ''}${country ? ',' + country : ''}&limit=1&appid=${apiKey}`;
-                const geoResponse = await fetch(geoUrl);
-                const geoData = await geoResponse.json();
-
-                if (!geoData.length) {
-                    throw new Error('City not found');
-                }
-
-                const { lat, lon, name, state: locationState, country: locationCountry } = geoData[0];
-
-                // Update city info
-                cityInfo.classList.remove('hidden');
-                cityInfoText.textContent = `Showing weather for ${name}${locationState ? ', ' + locationState : ''}, ${locationCountry}`;
-
-                // Get weather forecast
-                const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-                const weatherResponse = await fetch(weatherUrl);
-                const weatherData = await weatherResponse.json();
-
-                // Get one forecast per day (every 24 hours)
-                const dailyForecasts = weatherData.list.filter((item, index) => index % 8 === 0).slice(0, 5);
-
-                // Display weather cards
-                weatherResults.innerHTML = dailyForecasts.map(forecast => `
-                    <div class="card bg-base-100 shadow-xl">
-                        <div class="card-body p-20">
-                            <h2 class="card-title justify-center text-lg">
-                                ${new Date(forecast.dt * 1000).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
-                            </h2>
-                            <div class="flex justify-center">
-                                <img src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
-                                     alt="${forecast.weather[0].description}"
-                                     class="w-20 h-20">
-                            </div>
-                            <div class="stats stats-vertical shadow">
-                                <div class="stat">
-                                    <div class="stat-title">Temperature</div>
-                                    <div class="stat-value text-2xl">${Math.round(forecast.main.temp)}°C</div>
-                                    <div class="stat-desc">Feels like ${Math.round(forecast.main.feels_like)}°C</div>
-                                </div>
-                                <div class="stat">
-                                    <div class="stat-title">Humidity</div>
-                                    <div class="stat-value text-2xl">${forecast.main.humidity}%</div>
-                                    <div class="stat-desc">Wind: ${Math.round(forecast.wind.speed)} m/s</div>
-                                </div>
-                            </div>
-                            <p class="text-center mt-2 capitalize font-medium">${forecast.weather[0].description}</p>
-                        </div>
-                    </div>
-                `).join('');
-
-            } catch (err) {
-                error.classList.remove('hidden');
-                errorText.textContent = err.message === 'City not found'
-                    ? 'City not found. Please check the spelling and try again.'
-                    : 'Failed to fetch weather data. Please check your API key and try again.';
-            } finally {
-                loading.classList.add('hidden');
-            }
-        }
-					</script>
+</div>
 </body>
-<body class="bg-gray-50 p-6">
-    <div class="max-w-4xl mx-auto">
-        <!-- Header -->
+
+        <!-- Tickets & Tours -->
         <div class="flex justify-center mb-6">
-            <span class="bg-green-50 text-green-600 px-4 py-1 rounded-full">Tickets & Tours (2)</span>
+            <span class="bg-blue-50 text-blue-600 px-4 py-1 rounded-full">Tickets & Tours</span>
         </div>
 
         <!-- Tours Cards Container -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
             <!-- First Tour Card -->
             <div class="card bg-white shadow-sm hover:shadow-md transition-shadow">
                 <div class="card-body p-4">
@@ -387,7 +284,7 @@
                             <img src="/api/placeholder/128/96" alt="Spas Bangkok" class="w-full h-full object-cover rounded-lg"/>
                         </div>
 
-                        <!-- Content -->
+                        <!-- Spas - Bangkok buy tickets -->
                         <div class="flex-1">
                             <div class="flex justify-between items-start">
                                 <div>
@@ -419,7 +316,7 @@
                             <img src="/api/placeholder/128/96" alt="Sea Life Bangkok" class="w-full h-full object-cover rounded-lg"/>
                         </div>
 
-                        <!-- Content -->
+                        <!-- Sea Life Bangkok buy tickets -->
                         <div class="flex-1">
                             <div class="flex justify-between items-start">
                                 <div>
@@ -443,19 +340,13 @@
             </div>
         </div>
     </div>
-</body>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Card</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 p-6">
+</div>
+
+<div class="bg-gray-50 p-6">
     <div class="max-w-4xl mx-auto">
-        <!-- Header -->
+        <!-- Hotel -->
         <div class="flex justify-center mb-6">
-            <span class="bg-blue-50 text-blue-600 px-4 py-1 rounded-full">Hotel (1)</span>
+            <span class="bg-blue-50 text-blue-600 px-4 py-1 rounded-full">Hotel</span>
         </div>
 
         <!-- Hotel Card -->
@@ -470,6 +361,7 @@
                             </svg>
                         </div>
 
+                        <!--Bangkok check prices-->
                         <div>
                             <h3 class="font-medium text-lg">Bangkok</h3>
                             <p class="text-gray-500 text-sm">Tue 9/28 - Fri 10/1</p>
@@ -491,10 +383,10 @@
             </div>
         </div>
     </div>
-</body>
 
-</head>
-<body class="bg-gray-50 p-6">
+
+<!--plan ahead section-->
+<div class="bg-gray-50 p-6">
     <div class="max-w-4xl mx-auto">
         <!-- Header -->
         <div class="flex justify-center mb-6">
@@ -502,8 +394,9 @@
         </div>
 
         <!-- Cards Container -->
-        <div class="space-y-4">
-            <!-- First Card -->
+        <div class="space-y-5">
+
+            <!-- Check visa requirements check visa -->
             <div class="card bg-white shadow-sm hover:shadow-md transition-shadow">
                 <div class="card-body p-4">
                     <div class="flex items-center justify-between">
@@ -530,7 +423,7 @@
                 </div>
             </div>
 
-            <!-- Second Card -->
+            <!-- Second Card check visa -->
             <div class="card bg-white shadow-sm hover:shadow-md transition-shadow">
                 <div class="card-body p-4">
                     <div class="flex items-center justify-between">
@@ -557,7 +450,7 @@
                 </div>
             </div>
 
-            <!-- Third Card -->
+            <!-- Third Card Get Insurance -->
             <div class="card bg-white shadow-sm hover:shadow-md transition-shadow">
                 <div class="card-body p-4">
                     <div class="flex items-center justify-between">
@@ -584,7 +477,7 @@
                 </div>
             </div>
 
-            <!-- Fourth Card -->
+            <!-- Fourth Card buy ticket -->
             <div class="card bg-white shadow-sm hover:shadow-md transition-shadow">
                 <div class="card-body p-4">
                     <div class="flex items-center justify-between">
@@ -610,19 +503,15 @@
             </div>
         </div>
     </div>
-</body>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airtrav</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
+
+
+<div>
     <div class="container mx-auto px-4">
+
         <!-- Navigation Bar -->
         <nav class="flex items-center justify-between py-4">
-            <!-- Logo -->
+
+            <!-- Logo Airtrav -->
             <div class="flex items-center">
                 <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center">
                     <span class="text-white text-2xl font-bold">A</span>
@@ -632,6 +521,7 @@
 
             <!-- Navigation Links -->
             <div class="flex space-x-16">
+
                 <!-- Services Dropdown -->
                 <div class="dropdown dropdown-hover">
                     <label tabindex="0" class="text-gray-600 hover:text-gray-900 cursor-pointer">Services</label>
@@ -685,15 +575,9 @@
             </div>
         </div>
     </div>
-</body>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
+</div>
+
+<div>
     <footer class="container mx-auto px-4 py-8 mt-16 border-t">
         <div class="flex justify-between items-center">
             <!-- Copyright Text -->
@@ -733,12 +617,8 @@
             </div>
         </div>
     </footer>
-</body>
+</div>
+    </div>
 
-</body>
 
-</html>
-</body>
-
-</html>
-
+</div>
